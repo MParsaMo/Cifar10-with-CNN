@@ -59,7 +59,7 @@ Input: 32x32x3
 └── Dense(128) + BatchNorm + Dropout
 └── Dense(10) [Softmax Output]
 ```
-
+---
 
 📊 Training Details
 Optimizer: SGD with momentum (0.95)
@@ -72,6 +72,8 @@ Batch Size: 64
 
 Validation Split: 20%
 
+---
+
 🧪 Results
 Final evaluation on test data:
 
@@ -79,14 +81,18 @@ Test Loss: Displayed at runtime
 
 Test Accuracy: Displayed at runtime
 
+---
+
 📷 Sample Output
 Displays the first image from the dataset with its label.
 plt.imshow(x_train_full[0])
 print(y_train_full[0])
 
+---
 
 🙌 Contributing
 Pull requests are welcome! If you'd like to improve the architecture, optimize training, or enhance documentation, feel free to submit suggestions.
 
+---
 
 Let me know if you'd like me to tweak the style, add visuals, or set up the repo structure with folders like `/data`, `/models`, and `/notebooks`.
