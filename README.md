@@ -95,4 +95,20 @@ Pull requests are welcome! If you'd like to improve the architecture, optimize t
 
 ---
 
-Let me know if you'd like me to tweak the style, add visuals, or set up the repo structure with folders like `/data`, `/models`, and `/notebooks`.
+## 📝 Notes
+
+To address overfitting during training, **image data augmentation** was applied using `ImageDataGenerator`. This enhances model generalization by randomly transforming training images with rotation, shift, and horizontal flip techniques.
+
+If you'd prefer to train without augmentation, you can switch to the standard training method by modifying the code as follows:
+
+```python
+# Use this line instead for regular training without augmentation
+# history = model.fit(x_train, y_train, epochs=50, batch_size=64, validation_data=(x_validate, y_validate))
+```
+And comment out the augmentation-based training:
+# history = model.fit(datagen.flow(x_train, y_train, batch_size=64), epochs=50, validation_data=(x_validate, y_validate), verbose=1, callbacks=[early_stopping])
+Augmentation tends to be especially useful when working with relatively small datasets or when early signs of overfitting are observed during training.
+
+---
+
+Let me know if you'd like to annotate your training curves next—or even visualize the effect of augmentation on sample images.
