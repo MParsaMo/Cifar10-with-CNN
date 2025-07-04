@@ -56,6 +56,8 @@ Input: 32x32x3
 └── Flatten
 └── Dense(128) + BatchNorm + Dropout
 └── Dense(10) [Softmax Output]
+```text
+
 
 📊 Training Details
 Optimizer: SGD with momentum (0.95)
