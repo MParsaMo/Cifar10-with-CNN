@@ -106,7 +106,9 @@ If you'd prefer to train without augmentation, you can switch to the standard tr
 # history = model.fit(x_train, y_train, epochs=50, batch_size=64, validation_data=(x_validate, y_validate))
 ```
 And comment out the augmentation-based training:
-# history = model.fit(datagen.flow(x_train, y_train, batch_size=64), epochs=50, validation_data=(x_validate, y_validate), verbose=1, callbacks=[early_stopping])
+```python
+history = model.fit(datagen.flow(x_train, y_train, batch_size=64), epochs=50, validation_data=(x_validate, y_validate), verbose=1, callbacks=[early_stopping])
+```
 Augmentation tends to be especially useful when working with relatively small datasets or when early signs of overfitting are observed during training.
 
 ---
